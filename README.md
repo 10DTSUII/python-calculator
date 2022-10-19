@@ -15,7 +15,8 @@ Ahmed Abdi
  
  Layout
  Miro - The planning of my layout is in this **Website**:[**Miro.com**](https://miro.com/app/board/uXjVPSxXFYc=/)
- ![image](https://user-images.githubusercontent.com/103612434/196820964-026759b4-d75f-4e8f-bceb-f3885c8344dd.png)
+ ![image]
+ (https://user-images.githubusercontent.com/103612434/196820964-026759b4-d75f-4e8f-bceb-f3885c8344dd.png)
 
  
  The numbers are listed 0-9, in order from top to bottom. This is because kids generally..
