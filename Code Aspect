@@ -1,0 +1,141 @@
+ # A Abdi
+
+# *********************************
+#Python Calculator with Gui
+# *********************************
+
+# from cgitb import html
+from tkinter import * # import the tiknter library
+### The window is wating for a button press - number 
+def button_press(num):
+    global equation_text    ### the element reffering to all and scopes the program
+    ### the equation text is a concatenation. It interconnects the equation text to the string of number variables.
+    equation_text = equation_text + str(num)
+    ### the label is set as the equation text.
+    equation_label.set(equation_text)
+
+def equals():
+    global equation_text
+    
+    try: 
+
+        total = str(eval(equation_text))
+
+        equation_label.set(total)
+        equation_text=total
+        ### The grammatical error of english, but the math equivalent
+    except SyntaxError:
+        equation_text.set("Syntax error")
+        equation_text=""
+
+
+def clear():
+    global equation_text
+
+    equation_label.set("")
+    equation_text=""
+
+### Designing the Graphic User Interface (GUI)
+
+window = Tk() ### Window is set as the tkinter.
+window.title("Python Calculator") ###  The title of the tkinter  defined by the window.title variable.
+window.geometry("500x500")  ### The geometric measurements of the tkinter geometry.
+window.configure(bg="blue") ### the window variable determines the background color of the tkinter calculator
+
+
+equation_text= ""
+### 
+equation_label = StringVar() 
+### defining the python funciton -LABEL- to a variable
+label = Label(window, textvariable=equation_label, font=("console",20), bg="white", width=24, height=1 )
+label.pack()
+### defining the python funciton Frame to the variable frame and coloring the window green
+frame = Frame(window, bg="green")
+frame.pack()
+
+
+#### The Button python function is assigned as a variable to button
+# . It is set within the frame. The padding of both the x and y is preferential.
+# In this case the buttons are used to convey stand out grab the attention of the user
+# in different parts and are labelled accordingly.For intsance, the color of numbers is 
+# different to that ofthe operater, which is also different to that of the clear and decimal.
+button1 = Button(frame, text=1, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold'), command=lambda : button_press(1))
+button1.grid(row=0, column=0)
+
+button2 = Button(frame, text=2, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold'), command=lambda : button_press(2))
+button2.grid(row=0, column=1)
+
+button3 = Button(frame, text=3, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold'), command=lambda : button_press(3))
+button3.grid(row=0, column=2)
+
+button4 = Button(frame, text=4, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=lambda : button_press(4))
+button4.grid(row=1, column=0)
+
+button5 = Button(frame, text=5, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=lambda : button_press(5))
+button5.grid(row=1, column=1)
+
+button6 = Button(frame, text=6, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=lambda : button_press(6))
+button6.grid(row=1, column=2)
+
+button7 = Button(frame, text=7, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=lambda : button_press(7))
+button7.grid(row=2, column=0)
+
+button8 = Button(frame, text=8, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=lambda : button_press(8))
+button8.grid(row=2, column=1)
+
+
+button9 = Button(frame, text=9, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=lambda : button_press(9))
+button9.grid(row=2, column=2)
+
+
+button0 = Button(frame, text=0, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=lambda : button_press(0))
+button0.grid(row=3, column=0)
+
+
+# create operation buttons
+### The plus button assignes the Button function from python as a variable. Is set in the frame
+### The text being the + sign and the button extending half of the calculators height on the 
+#  right side to demand attention
+plus = Button(frame, text="+", height=4, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=lambda: button_press('+'))
+plus.grid(row=0, column=3, rowspan=2)
+
+
+###The minus button also assignes the Button function from python as a variable and is set within
+## the frame. The text is the minus sign -  and is below 
+minus = Button(frame, text="-", height=4, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=lambda: button_press('-'))
+minus.grid(row=2, column=3, rowspan=2)
+
+
+
+# create equals
+## The 
+equal =Button(frame, text='=', padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=equals)
+equal.grid(row=3, column=2)
+
+
+# create decimal button
+decimal =Button(frame, text='.', padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=lambda: button_press('.'))
+decimal.grid(row=3, column=1)
+
+# create a clear  button
+
+clear =Button(window, text="clear", padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=clear)
+clear.pack()
+
+
+
+### The window main loop is where all the hardware, code functions and demands resides.
+window.mainloop()
+
