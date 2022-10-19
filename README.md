@@ -8,8 +8,10 @@ Ahmed Abdi
 #The Design
  Color-My color choice was derived form **Website**:[**www.w3schools.com**](https://www.w3schools.com/colors/colors_picker.asp)
  
- The reasoning that derived my choice of the color blue is the 
- 
+ My conclusion of the color blue was derived from the fact that the  color enhances creativity and produces a calm, relaxing enviromernt. Which is the ideal condition, as the purpose of a calculator is to carry out mathematical operations. For instance, if a child is attempting to comprehend mathematical concepts such as addition and subtraction, a distracting, disruptive mindset and agitated mindset will be detrimental to the childs learning. However, the color blue migates such a mind set and brings the feeling of tranquility and serenity. Futhermore, another reason why i derived the color blue, as opposed to other colors such as red, is the constant 
+
+Another reason why i derived the color blue as opposed to other colors such as red, is the  
+
 
  
  
