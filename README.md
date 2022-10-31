@@ -23,12 +23,6 @@ Yellow- Stimulates your eyes rather than your mental state which is the basis up
 
 Purple & Pink were not chosen for the simple reason that the colors would be too distracting which is detrimental for a child's learning.
 
-
-## Buttons
-The buttons were colored white because it was a clam, neutral color that creates positive feelings and helps learners engage. 
-The color black was used to create a contrast between the color of the buttons and the number key on it.
- 
- 
  
 ## Layout
  Miro - The planning of my layout is in this **Website**:[**Miro.com**](https://miro.com/app/board/uXjVPSxXFYc=/)
@@ -36,6 +30,38 @@ The color black was used to create a contrast between the color of the buttons a
 
  
 ![image](https://user-images.githubusercontent.com/103612434/196822058-1355983e-0165-4d9a-ae00-b6e26177b8fc.png)
+
+
+
+## Buttons
+The buttons were colored white because it was a clam, neutral color that creates positive feelings and helps learners engage. 
+The color black was used to create a contrast between the color of the buttons and the number key on it.
+ 
+ button = Button(frame, text=0, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold')
+, command=lambda : button_press(0))
+
+The button= Button is assigning the python funtion to the visual studio code function as a variable. The (frame,...  means that the button is set within the frame/Grid(Discussed below). The (text=) is the text that appears on the actual tkinter calculator and in this case - it is the numbers 0-1.
+
+The padx is a function that puts some space between the button widgets and between the closeButton and the right border of the root window; and vise versia, the pady function puts some space between the button widgets and the borders of the frame and the borders of the root window.  
+
+bd=8 is the representation of the border width. 
+fg="black" is the color of the text within the button that is with in the frame.
+
+I have set a univeral font of arial and set the size to 20px, as well making every text bold. 
+
+The command=lambda : button_press(x) is a function that is reffered to as the anonymous function and is invaluable when creating a Tkinter Gui application.
+lamda is a function that allows data to be sent through a call back function; which is prevelant in the case of our calculator in the form of button press. Therfore, the press of a button will initiate the command=lambda whhich in turn will pas the data to a call back function.
+
+
+
+
+
+However there are several exceptions such as:
+The operation keys and clear buttons. 
+Whilst the color, spacing and font size may be the same 
+
+
+
 
 
  ## Grid
@@ -54,7 +80,7 @@ The color black was used to create a contrast between the color of the buttons a
  The number 9 is row=2 column =2
  The number 0 is row=3 column =0
  
- I have excluded the clear button as this has been packed and not in the grid.....
+ I have excluded the clear button as this has not been assigned to the grid but has been Packed
  
 
 ### The window main loop is where all the hardware, code functions and demands resides.
