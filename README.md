@@ -58,7 +58,37 @@ lamda is a function that allows data to be sent through a call back function; wh
 
 However there are several exceptions such as:
 The operation keys and clear buttons. 
-Whilst the color, spacing and font size may be the same 
+
+
+Addition:plus = Button(frame, text="+", height=4, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold'), command=lambda: button_press('+'))
+plus.grid(row=0, column=3, rowspan=2)
+
+
+Subtraction:minus = Button(frame, text="-", height=4, padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold'), command=lambda: button_press('-'))
+minus.grid(row=2, column=3, rowspan=2)
+
+
+Decimal: decimal =Button(frame, text='.', padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold'), command=lambda: button_press('.'))
+decimal.grid(row=3, column=1)
+
+
+Clear:
+clear =Button(window, text="clear", padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold'), command=clear)
+clear.pack()
+
+The tkinter Button function is assigned to clear as a variable.
+The location of the clear button is "Within the Window not the frame". This is crucial as this is why the clear button is an exception to other buttons.
+The padding of the x and y, the bd=8 and the color as well as the font are invariant funcitions.
+The command=clear is also what differientiates the operations from the number buttons.  The command=clear is used as a method to delete (0,end) all
+content within the range.Futhermore, the button is packed in a horizontal/vertical boxes that are limited to left,right,top and bottom positions offset and relative to each other with in the window. In this case, due to the fact i haven't specefied the side which side the buttons should be on; it automatically adjoins the bottom of the ((frame/window.)) 
+
+
+Equal:equal =Button(frame, text='=', padx=16, pady=16, bd=8, fg='black', font=('arial', 20, 'bold'), command=equals)
+equal.grid(row=3, column=2)
+The only reason why the equal button is placed in the exception section is the command  function and the text.
+In contrast to the number buttons, the only difference form the equal button is the text that appears and the function of its command.
+The (text='=') is the text that appears on the tkinter calculator, its an operation not a number. Futhermore, the command=equal function 
+.....
 
 
 
